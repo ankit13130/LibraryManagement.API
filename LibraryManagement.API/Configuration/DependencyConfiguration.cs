@@ -13,6 +13,7 @@ public static class DependencyConfiguration
     {
         services.AddTransient<IStudentServices, StudentServices>();
         services.AddTransient<IStudentRepository, StudentRepository>();
+        services.AddTransient<IValidationServices, ValidationServices>();
         services.AddAutoMapper(typeof(MappingProfile));
         services.AddControllersWithViews().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<StudentValidation>());
     }

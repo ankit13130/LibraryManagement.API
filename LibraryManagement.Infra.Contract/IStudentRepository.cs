@@ -9,4 +9,5 @@ public interface IStudentRepository
     public Task RemoveStudentAsync(Student student);
     public Task<Student> GetStudentAsync(long studentId);
     public Task<IList<Student>> GetAllStudentsAsync();
+    public Task<Student> GetStudentAsync(string email);
 }

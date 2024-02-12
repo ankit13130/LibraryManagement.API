@@ -43,4 +43,9 @@ public class StudentRepository : IStudentRepository
     {
         return await _libraryManagementContext.Students.Where(x => x.IsActive).ToListAsync();
     }
+
+    public async Task<Student> GetStudentAsync(string email)
+    {
+        return await _libraryManagementContext.Students.FirstOrDefaultAsync(x => x.Email == email && x.IsActive);
+    }
 }

@@ -9,5 +9,6 @@ public class StudentValidation : AbstractValidator<StudentRequestModel>
     {
         RuleFor(x=>x.FirstName).NotEqual("string").NotEmpty().Length(4,15);
         RuleFor(x => x.LastName).NotEqual("string").NotEmpty().Length(4, 15);
+        RuleFor(x => x.Email).NotEmpty().EmailAddress();
     }
 }
