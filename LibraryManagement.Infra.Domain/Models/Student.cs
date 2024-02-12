@@ -8,4 +8,5 @@ public class Student : Audit
     public string Email {  get; set; }
     public string Hash { get; set; }
     public string Salt { get; set; }
+    public string Roles { get; set; }
 }

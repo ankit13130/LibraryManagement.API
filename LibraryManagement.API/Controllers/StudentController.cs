@@ -1,5 +1,6 @@
 ﻿using LibraryManagement.Core.Contract;
 using LibraryManagement.Core.Domain.RequestModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,12 +17,14 @@ public class StudentController : ControllerBase
         _studentServices = studentServices;
     }
 
+    [Authorize(Roles ="student")]
     [HttpGet]
     public async Task<IActionResult> GetStudents()
     {
         return Ok(await _studentServices.GetAllStudentsAsync());
     }
 
+    [Authorize(Roles = "admin")]
     [HttpGet("{studentId}")]
     public async Task<IActionResult> GetStudent(long studentId)
     {

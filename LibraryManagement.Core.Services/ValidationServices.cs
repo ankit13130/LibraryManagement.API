@@ -47,13 +47,13 @@ public class ValidationServices : IValidationServices
         {
             new Claim(ClaimTypes.Sid,student.StudentId.ToString()),
             new Claim(ClaimTypes.Name,student.FirstName),
-            //new Claim(ClaimTypes.Role,users.Roles),
+            new Claim(ClaimTypes.Role,student.Roles),
             //new Claim(ClaimTypes.Role,"ADMIN"),
             //new Claim(ClaimTypes.Role,"USER")
         };
 
-        var token = new JwtSecurityToken(null,
-            null,
+        var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
+            _configuration["Jwt:Audience"],
             claims,
             expires: DateTime.Now.AddMinutes(1),
             signingCredentials: credentials);
