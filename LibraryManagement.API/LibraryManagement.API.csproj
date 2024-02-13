@@ -23,4 +23,8 @@
     <ProjectReference Include="..\LibraryManagement.Infra.Repositories\LibraryManagement.Infra.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Profile\" />
+  </ItemGroup>
+
 </Project>

@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using LibraryManagement.Core.Builder;
 using LibraryManagement.Core.Contract;
 using LibraryManagement.Core.Domain.RequestModels;
 using LibraryManagement.Core.EncryptDecrypt;
 using LibraryManagement.Infra.Contract;
 using LibraryManagement.Infra.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -80,12 +82,19 @@ public class ValidationServices : IValidationServices
             throw new Exception("Student Already Exists with entered Email");
         }
 
-        Student student = _mapper.Map<Student>(studentRequestModel);
-
         EncryptionDecryption encryptDecrypt = new EncryptionDecryption();
+        string Hash = encryptDecrypt.HashPasword(studentRequestModel.Password, out var salt);
+        string Salt = Convert.ToHexString(salt);
 
-        student.Hash = encryptDecrypt.HashPasword(studentRequestModel.Password, out var salt);
-        student.Salt = Convert.ToHexString(salt);
+        //image upload
+        string fileName = Guid.NewGuid().ToString() + Path.GetExtension(studentRequestModel.ProfileImage.FileName);
+        string path = Path.Combine(Environment.CurrentDirectory, @"Profile\", fileName);
+        using (var stream = new FileStream(path, FileMode.Create,FileAccess.ReadWrite))
+        {
+            studentRequestModel.ProfileImage.CopyToAsync(stream);
+        }
+
+        Student student = StudentBuilder.Build(studentRequestModel, Hash, Salt,fileName);
 
         await _studentRepository.CreateStudentAsync(student);
     }

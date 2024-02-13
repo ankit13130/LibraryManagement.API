@@ -23,7 +23,7 @@ public class ValidationController : ControllerBase
 
     //[AllowAnonymous]
     [HttpPost("signup")]
-    public async Task<IActionResult> Signup([FromBody] StudentRequestModel studentRequestModel)
+    public async Task<IActionResult> Signup([FromForm] StudentRequestModel studentRequestModel)
     {
         await _validationServices.ValidateSignupAsync(studentRequestModel);
         return Created();

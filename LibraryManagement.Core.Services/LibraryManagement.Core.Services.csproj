@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LibraryManagement.Core.Builder\LibraryManagement.Core.Builder.csproj" />
     <ProjectReference Include="..\LibraryManagement.Core.Contract\LibraryManagement.Core.Contract.csproj" />
     <ProjectReference Include="..\LibraryManagement.Infra.Contract\LibraryManagement.Infra.Contract.csproj" />
   </ItemGroup>

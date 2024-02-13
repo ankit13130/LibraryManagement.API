@@ -9,19 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BBF686F8-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{45CFA750-A9DF-41FA-9597-D8A6E1B35C09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.API", "LibraryManagement.API\LibraryManagement.API.csproj", "{84CAC5A7-D8AD-41A3-8DA6-37DBCD34DD4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.API", "LibraryManagement.API\LibraryManagement.API.csproj", "{84CAC5A7-D8AD-41A3-8DA6-37DBCD34DD4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Core.Domain", "LibraryManagement.Core\LibraryManagement.Core.Domain.csproj", "{5F007FB6-4385-43C6-A0BD-0A6ABD9A32D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Core.Domain", "LibraryManagement.Core\LibraryManagement.Core.Domain.csproj", "{5F007FB6-4385-43C6-A0BD-0A6ABD9A32D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Core.Contract", "LibraryManagement.Core.Contract\LibraryManagement.Core.Contract.csproj", "{A911D6AD-FD0A-4724-8BE9-EEBAD2EFF934}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Core.Contract", "LibraryManagement.Core.Contract\LibraryManagement.Core.Contract.csproj", "{A911D6AD-FD0A-4724-8BE9-EEBAD2EFF934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Core.Services", "LibraryManagement.Core.Services\LibraryManagement.Core.Services.csproj", "{1616F886-51D6-4D6E-8956-0955BFDCD3F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Core.Services", "LibraryManagement.Core.Services\LibraryManagement.Core.Services.csproj", "{1616F886-51D6-4D6E-8956-0955BFDCD3F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Infra.Contract", "LibraryManagement.Infra.Contract\LibraryManagement.Infra.Contract.csproj", "{77903572-5EBC-40D7-9859-8CCAB5AA9DF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Infra.Contract", "LibraryManagement.Infra.Contract\LibraryManagement.Infra.Contract.csproj", "{77903572-5EBC-40D7-9859-8CCAB5AA9DF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Infra.Domain", "LibraryManagement.Infra.Domain\LibraryManagement.Infra.Domain.csproj", "{E85C4692-4312-4A97-8394-02A7D6355C39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Infra.Domain", "LibraryManagement.Infra.Domain\LibraryManagement.Infra.Domain.csproj", "{E85C4692-4312-4A97-8394-02A7D6355C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Infra.Repositories", "LibraryManagement.Infra.Repositories\LibraryManagement.Infra.Repositories.csproj", "{C30FF9C6-B033-4BEC-91BD-F03397DA0403}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagement.Infra.Repositories", "LibraryManagement.Infra.Repositories\LibraryManagement.Infra.Repositories.csproj", "{C30FF9C6-B033-4BEC-91BD-F03397DA0403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement.Core.Builder", "LibraryManagement.Core.Builder\LibraryManagement.Core.Builder.csproj", "{EF6CB933-C830-4227-B318-F2F0AE94265D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{C30FF9C6-B033-4BEC-91BD-F03397DA0403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C30FF9C6-B033-4BEC-91BD-F03397DA0403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C30FF9C6-B033-4BEC-91BD-F03397DA0403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6CB933-C830-4227-B318-F2F0AE94265D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6CB933-C830-4227-B318-F2F0AE94265D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6CB933-C830-4227-B318-F2F0AE94265D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6CB933-C830-4227-B318-F2F0AE94265D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{77903572-5EBC-40D7-9859-8CCAB5AA9DF2} = {45CFA750-A9DF-41FA-9597-D8A6E1B35C09}
 		{E85C4692-4312-4A97-8394-02A7D6355C39} = {45CFA750-A9DF-41FA-9597-D8A6E1B35C09}
 		{C30FF9C6-B033-4BEC-91BD-F03397DA0403} = {45CFA750-A9DF-41FA-9597-D8A6E1B35C09}
+		{EF6CB933-C830-4227-B318-F2F0AE94265D} = {BBF686F8-EB92-40A2-B4E9-466A9189EDE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8414CAC3-E0D4-4F3B-94AE-64C638CF86FB}
